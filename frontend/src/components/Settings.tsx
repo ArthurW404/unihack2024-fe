@@ -59,7 +59,7 @@ const Settings: React.FC<SettingsProps> = ({
 
   //   const handleFinishInterview = async () => {
   //     // Post our answer to the last question
-  //     const url = "http://127.0.0.1:5000/rating";
+  //     const url = `{import.meta.env.VITE_NEXT_PUBLIC_BACKEND_ROUTE}/rating`;
   //     const qa_chain = questionArr.reduce((prev, curr, idx) => {
   //         return [...prev, curr, answerArr[idx]];
   //     }, [])
@@ -166,7 +166,7 @@ const Settings: React.FC<SettingsProps> = ({
     const newQuestions = [...questionArr, prevQuest];
 
     // Post our answer to the last question
-    const url = "http://127.0.0.1:5000/question";
+    const url = `${import.meta.env.VITE_NEXT_PUBLIC_BACKEND_ROUTE}/question`;
     const options = {
       method: "POST",
       headers: {
@@ -223,7 +223,7 @@ const Settings: React.FC<SettingsProps> = ({
     setCountdownStart(true);
     setCallInterviewer("block flex flex-col opacity-40");
 
-    const url = "http://127.0.0.1:5000/greeting";
+    const url = `${import.meta.env.VITE_NEXT_PUBLIC_BACKEND_ROUTE}/greeting`;
 
     const options = {
       method: "GET",
